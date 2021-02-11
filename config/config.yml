@@ -1,0 +1,53 @@
+scenes:
+  - name: Welcome
+    note: 11
+    default: true
+  - name: Full
+    note: 12
+  - name: Split
+    note: 21
+  - name: Video
+    note: 22
+
+commands:
+  - note: 71
+    name: OBS__SetTextFreetype2Properties
+    payload:
+      source: SplitText
+      text: "Some question that someone has will end up here"
+  - note: 72
+    name: OBS__SetTextFreetype2Properties
+    payload:
+      source: SplitText
+      text: "This is the place the next question will show up"
+  - note: 73
+    name: OBS__SetTextFreetype2Properties
+    payload:
+      source: SplitText
+      text: "How about a third question, insightful"
+  - note: 74
+    name: OBS__SetTextFreetype2Properties
+    payload:
+      source: SplitText
+      text: "This is definitely one of the last"
+
+sounds:
+  - note: 41
+    command: 'paplay -d obs-and-default /home/ben/Downloads/oxp.wav &'
+    millis: 4810
+    momentary: true
+  - note: 42
+    command: 'paplay -d obs-and-default /home/ben/siren.wav &'
+    millis: 2100
+    momentary: true
+
+colorSchemes:
+  scene:
+    - [ 1, 0 ]
+    - [ 104, 2 ]
+  sound:
+    - [ 13, 0 ]
+    - [ 82, 2 ]
+  command:
+    - [ 25, 0 ]
+    - [ 41, 0 ]
